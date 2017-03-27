@@ -1,0 +1,35 @@
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Notice:  Undefined index: image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 56
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Notice:  Undefined index: image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 78
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Warning:  array_diff(): Argument #2 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 78
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 91
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:49:25 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:51:50 Asia/Katmandu] PHP Notice:  Undefined offset: 0 in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 65
+[15-Sep-2016 09:51:50 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 91
+[15-Sep-2016 09:51:50 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:51:50 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:51:50 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Notice:  Undefined index: image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 56
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Notice:  Undefined index: imageFiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 78
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Notice:  Undefined index: image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 78
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 78
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 91
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:52:49 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:53:38 Asia/Katmandu] PHP Notice:  Undefined offset: 0 in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 65
+[15-Sep-2016 09:53:38 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 91
+[15-Sep-2016 09:53:38 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:53:38 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:53:38 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:54:32 Asia/Katmandu] PHP Notice:  Undefined offset: 0 in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 65
+[15-Sep-2016 09:54:32 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 91
+[15-Sep-2016 09:54:32 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:54:32 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:54:32 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:54:58 Asia/Katmandu] PHP Notice:  Undefined offset: 0 in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 65
+[15-Sep-2016 09:54:58 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 91
+[15-Sep-2016 09:54:58 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:54:58 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112
+[15-Sep-2016 09:54:58 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_events/act_thismodule.php on line 112

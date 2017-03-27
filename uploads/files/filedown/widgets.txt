@@ -1,0 +1,25 @@
+ <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('footer-left-widget') ) ?>
+       
+
+
+
+<?php wp_nav_menu( array( 'theme_location' => 'primary'));	?>
+
+
+
+
+<?php 
+echo wp_get_attachment_image( get_post_meta(49,'logo',true), 'full');
+?>
+
+<?php 
+get_post_meta(get_the_ID(),'logo',true);?>
+
+
+
+
+<?php $loop = new WP_Query( array( 'post_type' => 'rsn_portfolio' ) ); 
+      while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+<?php endwhile; wp_reset_query(); ?>

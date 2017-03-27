@@ -1,0 +1,140 @@
+.topbar-v1{
+    border-top: none;
+}
+
+.topbar-v1 .top-v1-data li {
+    border-right: none;
+    display: inline-block;
+    margin-right: -4px;
+    padding: 14px 11px;
+}
+
+
+.topbar-v1 .top-v1-data li a{
+    color: #fff !important;
+    text-transform: uppercase;
+}
+
+.topbar-v1 .top-v1-contacts {
+    font-size: 13px;
+    margin-top: 8px;
+    color:#fff;
+}
+
+.header-v4 .navbar-header {
+    margin: 20px 0;
+}
+
+.navbar{
+	background: #0a82c6 url('../../images/mesh.png') !important;
+    margin-top: 1px !important;
+    border-radius: 0;
+    border: none;
+}
+
+.navbar-header{
+   width: 100%;
+}
+.navbar-brand{
+   float:none;
+   height: auto;   
+}
+
+.navbar-brand img{width: 20%;}
+
+@media (max-width: 640px) {
+	.navbar-brand img {
+	    width: 50%;
+	}
+}
+
+.searchoption{
+	padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.searchoption li{
+	display: inline-block;
+	color: #fff;
+	margin: 10px;
+	width: 90px;
+    text-transform: uppercase;
+}
+
+#atoz {
+    padding-bottom: 40px;
+}
+#atozbox {
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
+    height: auto;
+    margin: auto;
+    padding: 5px;
+}
+#atozbox li {
+    color: #fff;
+    display: inline;
+    text-transform: uppercase;
+}
+#atozbox li a{
+    color: #fff;    
+    margin: 0.4%;
+}
+
+.home_body_start{
+	background: #fff;
+}
+.some_blue_body{
+	height: 250px;
+	background: #0a82c6 url('../../images/mesh.png');
+	width: 100%;
+	top:0;
+}
+.now_content_start{
+	margin-top: -300px;
+}
+.videosize{
+	padding: 20px 0;
+}
+
+.cmslogo{
+	padding: 20px;
+	background: #000;
+}
+
+
+.music1 {
+    background-color: #fff;
+    margin: 15px 0;
+}
+.music2 {
+    background-color: #fff;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+
+.music_icons{
+	padding: 15px;
+}
+
+.lyrics_anchor{
+	vertical-align: top;	
+    padding: 2px 10px;
+}
+
+.music_icons audio{
+	width: 60%;
+	margin-top: 5px;
+	padding-left: 20px;
+}
+
+.songs_name{
+	padding-left: 20px;
+}
+
+
+.eventbanner {
+    background-color: #fff;
+    height: auto;
+    margin-top: 58px;
+}

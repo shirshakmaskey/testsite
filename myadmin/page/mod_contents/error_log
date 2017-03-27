@@ -1,0 +1,8 @@
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Notice:  Undefined index: image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 98
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Notice:  Undefined index: imageFiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 124
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Notice:  Undefined index: image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 124
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 124
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 136
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Notice:  Undefined index: selectedfiles in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 157
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Notice:  Undefined index: file_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 157
+[16-Jan-2017 11:30:47 Asia/Katmandu] PHP Warning:  array_diff(): Argument #1 is not an array in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_contents/act_thismodule.php on line 157

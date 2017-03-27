@@ -1,0 +1,14 @@
+[05-Mar-2017 06:59:57 Asia/Katmandu] PHP Notice:  Undefined index: user_agent in /home/lyricsnepal/public_html/myadmin/includes/application_top.php on line 131
+[05-Mar-2017 07:00:27 Asia/Katmandu] PHP Notice:  Undefined index: pathsaleLoginId in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 37
+[05-Mar-2017 07:00:27 Asia/Katmandu] PHP Notice:  Trying to get property of non-object in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 42
+[05-Mar-2017 07:00:27 Asia/Katmandu] PHP Notice:  Trying to get property of non-object in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 45
+[05-Mar-2017 07:01:41 Asia/Katmandu] PHP Notice:  Undefined index: user_agent in /home/lyricsnepal/public_html/myadmin/includes/application_top.php on line 131
+[09-Mar-2017 11:20:19 Asia/Katmandu] PHP Notice:  Undefined index: user_agent in /home/lyricsnepal/public_html/myadmin/includes/application_top.php on line 131
+[09-Mar-2017 11:20:29 Asia/Katmandu] PHP Notice:  Undefined index: pathsaleLoginId in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 37
+[09-Mar-2017 11:20:29 Asia/Katmandu] PHP Notice:  Trying to get property of non-object in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 42
+[09-Mar-2017 11:20:29 Asia/Katmandu] PHP Notice:  Trying to get property of non-object in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 45
+[09-Mar-2017 11:21:37 Asia/Katmandu] PHP Notice:  Undefined index: user_agent in /home/lyricsnepal/public_html/myadmin/includes/application_top.php on line 131
+[09-Mar-2017 11:21:48 Asia/Katmandu] PHP Notice:  Undefined index: pathsaleLoginId in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 37
+[09-Mar-2017 11:21:48 Asia/Katmandu] PHP Notice:  Trying to get property of non-object in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 42
+[09-Mar-2017 11:21:48 Asia/Katmandu] PHP Notice:  Trying to get property of non-object in /home/lyricsnepal/public_html/myadmin/page/mod_user/class.user.php on line 45
+[10-Mar-2017 12:19:15 Asia/Katmandu] PHP Notice:  Undefined index: user_agent in /home/lyricsnepal/public_html/myadmin/includes/application_top.php on line 131

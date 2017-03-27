@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>Step 1: <a href="http://dolem.com/lytebox/lytebox_v3.22.zip">Download Lytebox v3.22</a></p>
+<p>Step 2:  Add the following lines to the <strong>&lt;head&gt;</strong> of your document:</p>
+<pre>&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;lytebox.js&quot;&gt;&lt;/script&gt;  &lt;link rel=&quot;stylesheet&quot; href=&quot;lytebox.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot; /&gt;</pre>
+<p>Step 3:  Add the appropriate rel attribute for the type of display you want. See the examples below.<br />
+    <br />
+  <strong>Single Image Example:</strong></p>
+<pre>&lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lytebox&quot; title=&quot;Image Description&quot;&gt;Image #1&lt;/a&gt;</pre>
+<p>    <strong>Grouped Images Example:</strong></p>
+<pre>&lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lytebox[vacation]&quot; title=&quot;Mom and Dad&quot;&gt;Mom and Dad&lt;/a&gt;  &lt;a href=&quot;images/image-2.jpg&quot; rel=&quot;lytebox[vacation]&quot; title=&quot;My Sister&quot;&gt;My Sister&lt;/a&gt;</pre>
+<p>    <strong>Slideshow Example (note the use of lyteshow instead of lytebox):</strong></p>
+<pre>&lt;a href=&quot;images/image-1.jpg&quot; rel=&quot;lyteshow[vacation]&quot; title=&quot;Mom and Dad&quot;&gt;Mom and Dad&lt;/a&gt;  &lt;a href=&quot;images/image-2.jpg&quot; rel=&quot;lyteshow[vacation]&quot; title=&quot;My Sister&quot;&gt;My Sister&lt;/a&gt;</pre>
+<p>    <strong>HTML Content Example (note the use of lyteframe instead of lytebox):</strong></p>
+<pre>&lt;a href=&quot;http://www.google.com&quot; rel=&quot;lyteframe&quot; title=&quot;Search Google&quot;      rev=&quot;width: 400px; height: 300px; scrolling: no;&quot;&gt;Google Search&lt;/a&gt;    &lt;a href=&quot;catalog1.htm&quot; rel=&quot;lyteframe[catalog]&quot; title=&quot;Summer Catalog&quot;&gt;Summer Catalog&lt;/a&gt;  &lt;a href=&quot;catalog1.htm&quot; rel=&quot;lyteframe[catalog]&quot; title=&quot;Winter Catalog&quot;&gt;Winter Catalog&lt;/a&gt;</pre>
+<p><strong>Note:</strong> When using the &quot;Lyteframe&quot; feature, the REV attribute is used to  control the width, height, and scrolling of the window. If the REV  attribute is omitted, then by default width/height is set to 400px and  scrolling is set to auto. </p>
+<ul>
+  <li>Configuration: For a complete list of configurable Lytebox options, click <a href="http://dolem.com/lytebox/_configurations.htm" rel="lyteframe" title="Lytebox Configuration" rev="width: 740px; height: 420px; scrolling: auto;">HERE</a>.</li>
+  <li>iFrames: If you plan to use Lytebox in an iFrame environment, then you need to include lytebox.css in the parent document, while including lytebox.js in the iFrame document.</li>
+  <li>Source Code:  The JavaScript file (lytebox.js) that is included in the download has  been stripped down (comments removed) for optimization purposes. The  commented source code is available <a href="http://dolem.com/lytebox/lytebox_v3.22_source.zip">HERE</a>.</li>
+</ul>
+</body>
+</html>

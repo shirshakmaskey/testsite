@@ -1,0 +1,97 @@
+#	
+# astroandvastuservice.com
+#
+	
+# compress text, html, javascript, css, xml:		    
+<IfModule mod_deflate.c>
+# DEFLATE by type - html, text, css, xml
+AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml
+
+# DEFLATE by type - javascript ,xml
+AddOutputFilterByType DEFLATE application/x-javascript application/javascript text/javascript text/x-js text/x-javascript application/xml application/xhtml+xml application/rss+xml
+
+# DEFLATE by extension
+AddOutputFilter DEFLATE js css htm html xml
+</IfModule>
+
+# Or, compress certain file types by extension:
+<files *.html>
+SetOutputFilter DEFLATE
+</files>
+
+
+## Uncomment this if FollowSymLinks is not already enabled on your server
+#Options +FollowSymLinks
+
+## Use mod rewrite
+## Comment the line below if RewriteEngine not already enabled on your server
+RewriteEngine On
+
+## Uncomment the line below and change the path if your script is installed
+## in a different path than the root folder of your domain
+
+#RewriteBase /
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* – [F,L]
+
+IndexIgnore */*
+RewriteRule ^home$ index.php [L]
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^pages-([0-9a-zA-Z\_\.]+)$ control.php?m=contents&p=pages&slug=$1 [NC]
+RewriteRule ^post-([0-9a-zA-Z\_\.]+)$ control.php?m=contents&p=post&slug=$1 [NC]
+RewriteRule ^festival-([0-9a-zA-Z\_\.]+)$ control.php?m=contents&p=festival&slug=$1 [NC]
+RewriteRule ^services-([0-9a-zA-Z\_\.]+)$ control.php?m=contents&p=services&slug=$1 [NC]
+RewriteRule ^gallery$ gallery.php [L]
+RewriteRule ^gallery-([0-9]+)$ gallery.php?np=$1 [L]
+RewriteRule ^gallery-([0-9a-zA-Z\_]+)$ gallery.php?slug=$1 [L]
+RewriteRule ^gallery-([0-9a-zA-Z\_]+)-([0-9]+)$ gallery.php?slug=$1&np=$2 [L]
+RewriteRule ^filedownload$ download.php?m=download&p=list [NC]
+RewriteRule ^search-([0-9a-zA-Z\_]+)-([0-9]+)$ search.php?p=search&searchword=$1&np=$2 [NC]
+RewriteRule ^contact$ contact.php [L]
+RewriteRule ^enquiry-([0-9a-zA-Z\_]+)$ enquiry.php?act_id=$1 [NC]
+RewriteRule ^booking$ booking.php [L]
+RewriteRule ^booking-([0-9a-zA-Z\_]+)$ booking.php?act_id=$1 [NC]
+RewriteRule ^packages_detail-([0-9a-zA-Z\_]+)$ packages_detail.php?act_id=$1 [NC]
+RewriteRule ^packages$ packages.php?type=0 [L]
+RewriteRule ^special$ packages.php?type=1 [L]
+RewriteRule ^packages-([0-9a-zA-Z\_]+)$ packages.php?act_id=$1 [NC]
+RewriteRule ^packages_list-([0-9]+)-([a-z]+)-([0-9]+)-([0-9]+)$ packages.php?p=list&type=$1&ad=$2&pack=$3&np=$4 [L]
+RewriteRule ^destinations-([0-9a-zA-Z\_]+)$ packages.php?dest_id=$1 [NC]
+RewriteRule ^destination$ destination.php [L]
+RewriteRule ^destination-([0-9a-zA-Z\_]+)$ destination.php?slug=$1 [NC]
+RewriteRule ^hotel$ hotel.php [L]
+RewriteRule ^hotel-([0-9]+)$ hotel.php?np=$1 [L]
+RewriteRule ^hotel-([0-9a-zA-Z\_]+)$ hotel.php?slug=$1 [NC]
+RewriteRule ^news$ news.php [L]
+RewriteRule ^news-([0-9]+)$ news.php?np=$1 [L]
+RewriteRule ^news-([0-9a-zA-Z\_]+)$ news.php?slug=$1 [NC]
+RewriteRule ^testimonials$ testimonials.php [L]
+RewriteRule ^testimonials-([0-9]+)$ testimonials.php?np=$1 [L]
+RewriteRule ^testimonials-([0-9a-zA-Z\_]+)$ testimonials.php?slug=$1 [NC]
+RewriteRule ^custom-([0-9a-zA-Z\_]+)$ custom.php?slug=$1 [L]
+
+ErrorDocument 400 /error404.html
+
+#User-agent:*
+#Disallow: /includes 
+
+<IfModule mod_php5.c>
+php_value post_max_size 5M
+php_value upload_max_filesize 5M
+php_value memory_limit 300M
+php_value max_execution_time 259200
+php_value max_input_time 259200
+php_value session.gc_maxlifetime 100
+</IfModule>
+
+#Expire Header
+<FilesMatch "\.(ico|pdf|flv|jpe?g|png|gif|js|css|swf)$">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+DirectoryIndex run.php
+
+RewriteCond %{HTTP_HOST} ^www\.astroandvastuservice\.com$
+RewriteRule ^/?$ "http\:\/\/astroandvastuservice\.com\/" [R=301,L]

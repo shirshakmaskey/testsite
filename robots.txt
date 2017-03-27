@@ -1,0 +1,11 @@
+Sitemap: http://astroandvastuservice.com/sitemap.xml
+User-agent: *
+Disallow: /js/
+Disallow: /css/
+Disallow: /themes/
+Disallow: /includes/
+Disallow: /page/
+Disallow: /applications/
+Disallow: /.htaccess/
+Allow: /images/
+Allow: /uploads/

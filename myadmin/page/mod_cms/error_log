@@ -1,0 +1,4 @@
+[16-Jan-2017 11:25:30 Asia/Katmandu] PHP Warning:  mysql_real_escape_string(): Access denied for user 'root'@'localhost' (using password: NO) in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_cms/actFeedbackpage.php on line 12
+[16-Jan-2017 11:25:30 Asia/Katmandu] PHP Warning:  mysql_real_escape_string(): A link to the server could not be established in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_cms/actFeedbackpage.php on line 12
+[16-Jan-2017 11:25:30 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$name in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_cms/actFeedbackpage.php on line 29
+[16-Jan-2017 11:25:30 Asia/Katmandu] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/searchingzone/public_html/lyricsnepal/myadmin/includes/classes/class.phpmailer.php on line 288
