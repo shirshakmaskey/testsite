@@ -1,6 +1,6 @@
 <?php
 /* basic setting */
-$project_folder  = "nepalassitance";
+$project_folder  = "testsite";
 define("MYINDEX",1);
 define("SITEVALUE","local");
 define("DS","/");
@@ -8,7 +8,7 @@ define("PAGE","page");
 define("ENCR_KEY",$project_folder.'f_');
 /* --------------------------------------------------------------------------------*/
 /* foldernames  */
-define("PROJECT_FOLDER","/");
+define("PROJECT_FOLDER","/testsite/");
 //define("PROJECT_FOLDER","/");
 define("ADMINISTRATOR","myadmin/");
 $administrator       = "myadmin";
