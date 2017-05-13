@@ -1,0 +1,29 @@
+/* CSS Document */
+.table-wrapper_by_me {
+	background-color: #fff;
+	padding: 10px;
+}
+
+.table-wrapper_by_me table {
+	width: 100%;
+}
+
+.table-wrapper_by_me table th, .table-wrapper_by_me table td {
+	border-bottom: 1px solid #fff;
+	font-weight: normal;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.table-wrapper_by_me table tr.odd:hover td,
+.table-wrapper_by_me table tr.even:hover td {
+	background-color: #fffbb2;
+}
+
+
+.table-wrapper_by_me table td {
+	color: #000;
+	border-bottom: 1px solid #CCC;
+}
+
+

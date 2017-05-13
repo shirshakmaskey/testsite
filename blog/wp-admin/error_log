@@ -1,0 +1,4 @@
+[02-Feb-2017 02:50:14 Europe/London] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/lyricsnepal/public_html/blog/wp-admin/admin-functions.php on line 12
+[02-Feb-2017 02:50:16 Europe/London] PHP Fatal error:  Call to undefined function apply_filters() in /home/lyricsnepal/public_html/blog/wp-admin/menu-header.php on line 32
+[02-Feb-2017 02:50:16 Europe/London] PHP Fatal error:  Call to undefined function __() in /home/lyricsnepal/public_html/blog/wp-admin/menu.php on line 25
+[02-Feb-2017 02:50:16 Europe/London] PHP Fatal error:  Call to undefined function wp_reset_vars() in /home/lyricsnepal/public_html/blog/wp-admin/options-head.php on line 11

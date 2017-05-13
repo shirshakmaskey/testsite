@@ -1,0 +1,10 @@
+[16-Jan-2017 11:01:54 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[16-Jan-2017 11:02:15 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[16-Jan-2017 11:02:21 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[16-Jan-2017 11:04:26 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[16-Jan-2017 11:04:30 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[16-Jan-2017 11:04:34 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[25-Jan-2017 11:47:32 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[25-Jan-2017 11:47:40 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_member/act_customer.php on line 92
+[09-Mar-2017 11:21:36 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/lyricsnepal/public_html/myadmin/page/mod_member/act_customer.php on line 92
+[09-Mar-2017 11:22:00 Asia/Katmandu] PHP Notice:  Undefined property: stdClass::$certificate in /home/lyricsnepal/public_html/myadmin/page/mod_member/act_customer.php on line 92

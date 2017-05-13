@@ -1,0 +1,10 @@
+[15-Nov-2016 09:54:37 Asia/Katmandu] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home/searchingzone/public_html/lyricsnepal/myadmin/includes/classes/mysqli_driver.php on line 109
+[15-Nov-2016 09:54:56 Asia/Katmandu] PHP Notice:  Undefined variable: old_image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 18
+[15-Nov-2016 09:54:56 Asia/Katmandu] PHP Warning:  mysqli_errno() expects exactly 1 parameter, 0 given in /home/searchingzone/public_html/lyricsnepal/myadmin/includes/classes/mysqli_driver.php on line 109
+[18-Nov-2016 10:23:59 Asia/Katmandu] PHP Notice:  Undefined variable: slug in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 24
+[18-Nov-2016 10:24:54 Asia/Katmandu] PHP Notice:  Undefined variable: slug in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 24
+[18-Nov-2016 10:44:25 Asia/Katmandu] PHP Notice:  Undefined variable: slug in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 24
+[18-Nov-2016 10:45:37 Asia/Katmandu] PHP Notice:  Undefined variable: slug in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 24
+[18-Nov-2016 10:53:39 Asia/Katmandu] PHP Notice:  Undefined variable: old_image_arr in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 18
+[18-Nov-2016 10:53:39 Asia/Katmandu] PHP Notice:  Undefined variable: slug in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 24
+[18-Nov-2016 11:07:47 Asia/Katmandu] PHP Notice:  Undefined variable: slug in /home/searchingzone/public_html/lyricsnepal/myadmin/page/mod_sponser/act_thismodule.php on line 24

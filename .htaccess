@@ -1,0 +1,168 @@
+#	
+# lyricsnepal.com
+#
+	
+## Uncomment this if FollowSymLinks is not already enabled on your server
+Options +FollowSymLinks
+
+## Use mod rewrite
+## Comment the line below if RewriteEngine not already enabled on your server
+RewriteEngine On
+
+## Uncomment the line below and change the path if your script is installed
+## in a different path than the root folder of your domain
+
+#RewriteBase /
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.* 
+RewriteRule .* – [F,L]
+
+IndexIgnore */*
+RewriteRule ^home$ index.php [L]
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^welcome$ welcome.php [L]
+RewriteRule ^pages/(.*)$ control.php?m=contents&p=page&slug=$1 [NC]
+RewriteRule ^post/(.*)$ control.php?m=contents&p=post&slug=$1 [NC]
+RewriteRule ^festival/(.*)$ control.php?m=contents&p=festival&slug=$1 [NC]
+RewriteRule ^services/(.*)$ control.php?m=contents&p=services&slug=$1 [NC]
+RewriteRule ^rooms/([0-9a-zA-Z\_\-\.]+)$ rooms.php?m=rooms&p=rooms&slug=$1 [NC]
+RewriteRule ^items/cat/([0-9a-zA-Z\_\-\.]+)$ items.php?m=items&p=items&cat=view&slug=$1 [NC]
+
+RewriteRule ^items/cart$ items.php?m=items&p=items&cart=view [NC]
+
+RewriteRule ^checkout/success$ checkout.php?m=items&p=checkout&cart=success [NC]
+RewriteRule ^checkout/failure$ checkout.php?m=items&p=checkout&cart=failure [NC]
+RewriteRule ^checkout/finish$ checkout.php?m=items&p=checkout&cart=finish [NC]
+RewriteRule ^password_reset/([0-9a-zA-Z\_\-\.]+)$ checkout.php?m=items&p=checkout&slug=password_reset&keys=$1 [NC]
+RewriteRule ^checkout$ checkout.php [NC]
+
+RewriteRule ^items$ items.php?m=items&p=items [NC]
+
+RewriteRule ^items/([0-9a-zA-Z\_\-\.]+)$ items.php?m=items&p=items&slug=$1 [NC]
+RewriteRule ^sitemap$ sitemap.php [NC]
+RewriteRule ^gallery$ gallery.php [L]
+RewriteRule ^gallery/([0-9]+)$ gallery.php?np=$1 [L]
+RewriteRule ^gallery/([0-9a-zA-Z\_\-]+)$ gallery.php?slug=$1 [L]
+RewriteRule ^gallery/([0-9a-zA-Z\_\-]+)-([0-9]+)$ gallery.php?slug=$1&np=$2 [L]
+RewriteRule ^filedownload$ download.php?m=download&p=list [NC]
+RewriteRule ^search-([0-9a-zA-Z\_\-]+)-([0-9]+)$ search.php?p=search&searchword=$1&np=$2 [NC]
+RewriteRule ^contact$ contact.php [L]
+RewriteRule ^inquiry$ contact.php [L]
+#RewriteRule ^inquiry-([0-9a-zA-Z\_\-]+)$ contact.php?act_id=$1 [NC]
+#RewriteRule ^booking$ booking.php [L]
+#RewriteRule ^booking-([0-9a-zA-Z\_\-]+)$ booking.php?act_id=$1 [NC]
+#RewriteRule ^packages-detail/([0-9a-zA-Z\_\-]+)$ packages_detail.php?act_id=$1 [NC]
+#RewriteRule ^packages$ packages.php?type=0 [L]
+#RewriteRule ^special$ packages.php?type=1 [L]
+RewriteRule ^packages/([0-9a-zA-Z\_\-]+)$ packages.php?act_id=$1 [NC]
+RewriteRule ^packages-list/([0-9]+)-([a-z]+)-([0-9]+)-([0-9]+)$ packages.php?p=list&type=$1&ad=$2&pack=$3&np=$4 [L]
+RewriteRule ^destinations/([0-9a-zA-Z\_\-]+)$ packages.php?dest_id=$1 [NC]
+RewriteRule ^destination$ destination.php [L]
+RewriteRule ^destination/([0-9a-zA-Z\_\-]+)$ destination.php?slug=$1 [NC]
+RewriteRule ^hotel$ hotel.php [L]
+RewriteRule ^hotel/([0-9]+)$ hotel.php?np=$1 [L]
+RewriteRule ^hotel/([0-9a-zA-Z\_\-]+)$ hotel.php?slug=$1 [NC]
+#news_start
+RewriteRule ^news$ news.php [L]
+RewriteRule ^news/([0-9]+)$ news.php?np=$1 [L]
+RewriteRule ^news/cat/([a-zA-Z0-9\_\.-]+)$ news.php?m=news&p=cat&slug=$1 [L]
+RewriteRule ^news/cat/([a-zA-Z0-9\_\.-]+)/([0-9]+)$ news.php?m=news&p=cat&slug=$1&np=$2 [L]
+RewriteRule ^news/(.*)$ news.php?slug=$1 [NC]
+#news_end
+#sponser_start
+RewriteRule ^sponser$ sponser.php [L]
+RewriteRule ^sponser/([0-9]+)$ sponser.php?np=$1 [L]
+RewriteRule ^sponser/(.*)$ sponser.php?slug=$1 [NC]
+#sponser_end
+RewriteRule ^article$ article.php [L]
+RewriteRule ^article/([0-9]+)$ article.php?np=$1 [L]
+RewriteRule ^article/cat/([a-zA-Z0-9\_\.-]+)$ article.php?m=article&p=cat&slug=$1 [L]
+RewriteRule ^article/cat/([a-zA-Z0-9\_\.-]+)/([0-9]+)$ article.php?m=article&p=cat&slug=$1&np=$2 [L]
+RewriteRule ^article/(.*)$ article.php?slug=$1 [NC]
+
+
+RewriteRule ^testimonials/([0-9]+)$ testimonials.php?np=$1 [L]
+RewriteRule ^testimonials/([0-9a-zA-Z\_\-]+)$ testimonials.php?slug=$1 [NC]
+RewriteRule ^testimonials$ testimonials.php [L]
+RewriteRule ^custom/([0-9a-zA-Z\_\-]+)$ custom.php?slug=$1 [L]
+RewriteRule ^book_a_table$ book_a_table.php [L]
+RewriteRule ^booking$ book_a_table.php [L]
+RewriteRule ^special$ special.php [L]
+RewriteRule ^get_a_quote$ get_a_quote.php [L]
+
+RewriteRule ^download$ download.php [L]
+RewriteRule ^download/([0-9]+)$ download.php?np=$1 [L]
+RewriteRule ^download/cat/([a-zA-Z0-9\_\.-]+)$ download.php?m=download&p=cat&slug=$1 [L]
+RewriteRule ^download/cat/([a-zA-Z0-9\_\.-]+)/([0-9]+)$ download.php?m=download&p=cat&slug=$1&np=$2 [L]
+RewriteRule ^download/(.*)$ download.php?slug=$1 [NC]
+
+#events_start
+RewriteRule ^events$ events.php [L]
+RewriteRule ^events/([0-9]+)$ events.php?np=$1 [L]
+RewriteRule ^events/cat/([a-zA-Z0-9\_\.-]+)$ events.php?m=events&p=cat&slug=$1 [L]
+RewriteRule ^events/cat/([a-zA-Z0-9\_\.-]+)/([0-9]+)$ events.php?m=events&p=cat&slug=$1&np=$2 [L]
+RewriteRule ^events/(.*)$ events.php?slug=$1 [NC]
+#events_end
+
+RewriteRule ^stories$ stories.php [L]
+RewriteRule ^stories/([0-9]+)$ stories.php?np=$1 [L]
+
+RewriteRule ^post$ post.php [L]
+RewriteRule ^post/([0-9]+)$ post.php?np=$1 [L]
+RewriteRule ^post/cat/([a-zA-Z0-9\_\.-]+)$ post.php?m=post&p=cat&slug=$1 [L]
+RewriteRule ^post/cat/([a-zA-Z0-9\_\.-]+)/([0-9]+)$ post.php?m=post&p=cat&slug=$1&np=$2 [L]
+RewriteRule ^post/(.*)$ post.php?slug=$1 [NC]
+
+
+RewriteRule ^login$ login_register.php?m=user&p=login [L]
+RewriteRule ^register$ login_register.php?m=user&p=register [L]
+RewriteRule ^action/([0-9a-zA-Z\_\-\.]+)/([0-9a-zA-Z\_\-\.]+)$ action.php?m=$1&mode=$2 [L]
+RewriteRule ^action/([0-9a-zA-Z\_\-\.]+)/([0-9a-zA-Z\_\-\.]+)/([0-9a-zA-Z\_\-\.]+)$ action.php?m=$1&mode=$2&id=$3 [L]
+RewriteRule ^user/verification/([0-9a-zA-Z\_\-\.]+)$ user.php?m=user&p=verification&mode=$1 [L]
+RewriteRule ^user/change-password/([0-9]+)$ user.php?m=user&p=change_password&mode=$1 [L]
+RewriteRule ^user/([0-9a-zA-Z\_\-\.]+)$ user.php?m=user&p=$1 [L]
+RewriteRule ^user/([0-9a-zA-Z\_\-\.]+)/([0-9a-zA-Z\_\-\.]+)$ user.php?m=user&p=$1&mode=$2 [L]
+RewriteRule ^payment/([0-9a-zA-Z\_\-\.]+)$ payment.php?m=payment&p=$1 [L]
+RewriteRule ^payment/([0-9a-zA-Z\_\-\.]+)/([0-9a-zA-Z\_\-\.]+)$ payment.php?m=payment&p=$1&mode=$2 [L]
+
+RewriteRule ^training/([0-9a-zA-Z\_\-\.]+)$ search.php?m=user&p=training&slug=$1 [L]
+RewriteRule ^search/alphabet/([a-zA-Z0-9\-]+)$ search.php?m=user&p=search&alphabet=$1&searchBtn=1&searchtype[]=all [L]
+
+RewriteRule ^lyrics/([0-9a-zA-Z\_\-\.]+)$ lyrics.php?slug=$1 [L]
+RewriteRule ^artist/([0-9a-zA-Z\_\-\.]+)$ artist.php?slug=$1 [L]
+RewriteRule ^album/([0-9a-zA-Z\_\-\.]+)$ album.php?slug=$1 [L]
+ErrorDocument 400 /error404.html
+
+
+
+
+#User-agent:*
+#Disallow: /includes 
+
+<IfModule mod_php5.c>
+php_value post_max_size 5M
+php_value upload_max_filesize 5M
+php_value memory_limit 300M
+php_value max_execution_time 259200
+php_value max_input_time 259200
+php_value session.gc_maxlifetime 100
+</IfModule>
+
+#Expire Header
+<FilesMatch "\.(ico|pdf|flv|jpe?g|png|gif|js|css|swf)$">
+    #ExpiresActive On
+    #ExpiresDefault "access plus 1 month"
+</FilesMatch>
+
+#DirectoryIndex splash.php
+
+RewriteCond %{HTTP_HOST} ^173\.45\.94\.122
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+#Redirecting www to non-www
+#RewriteCond %{HTTP_HOST} !^lyricsnepal\.com$ [NC]
+#RewriteRule ^(.*)$ http://lyricsnepal.com/$1 [R=301,L]
+
+#Redirecting non-www to www
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]

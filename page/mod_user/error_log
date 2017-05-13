@@ -1,0 +1,1 @@
+[14-Feb-2017 13:10:03 Asia/Katmandu] PHP Fatal error:  Call to undefined method User::find_by_email() in /home/lyricsnepal/public_html/page/mod_user/ajax.php on line 186

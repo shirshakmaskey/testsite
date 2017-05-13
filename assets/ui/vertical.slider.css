@@ -1,0 +1,55 @@
+/*for ui verticle scroll bar*/
+.scroll-content {
+	position:absolute;
+	top:0;
+	left:0
+}
+.slider-wrap {
+	position:absolute;
+	right:0;
+	top:0;
+	backgrund:#C3E1EF;
+	width:4px;
+}
+.slider-vertical {
+	position:relative;
+	height:100%
+}
+.ui-slider-handle {
+	width:4px;
+	height:10px;
+	margin:0 auto;
+	background-color:#0066FF;
+	display:block;
+	position:absolute;
+}
+.ui-slider-handle img {
+	border:none
+}
+.scrollbar-top {
+	position:absolute;
+	top:0;
+}
+.scrollbar-bottom {
+	position:absolute;
+	bottom:0;
+}
+.scrollbar-grip {
+	position:absolute;
+	top:50%;
+	margin-top:-6px;
+}
+.ui-slider-range {
+	position:absolute;
+	width:100%;
+	background:#C3E1EF;
+}
+#searchCooperative {
+	float:left;
+	overflow: auto;
+	width: 510px;
+	height:1200px;
+	position:relative;
+	margin-bottom:25px;
+	display:inline;
+}

@@ -1,0 +1,20 @@
+<?php
+if ($_SERVER['HTTP_HOST'] == "localhost:8080" || $_SERVER['HTTP_HOST'] == "localhost" ||  $_SERVER['HTTP_HOST']=="127.0.0.1")
+{
+	define("HOST","127.0.0.1");
+	define("USER","root");
+	define("PASS","");
+	define("DBNAME","db_lyrics");
+}
+else
+{
+	/*define("HOST","localhost");
+	define("USER","lyricsne_dbnepal");
+	define("PASS","90s-~S=fID3_");
+	define("DBNAME","lyricsne_dbnepal");*/
+	define("HOST","localhost");
+	define("USER","lyricsne_lyrics");
+	define("PASS","^-o%%aBZ5fVE");
+	define("DBNAME","lyricsne_lyrics");
+}
+?>

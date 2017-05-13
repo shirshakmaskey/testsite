@@ -1,0 +1,41 @@
+#Options All
+RewriteEngine On
+RewriteRule ^administrator$  index.php [L]
+RewriteRule ^signout$  logout.php [L]
+RewriteRule ^signin$  login.php [L]
+RewriteRule ^signin/change-password/([0-9]+)$  login.php?act=change_password&code=$1 [L]
+RewriteRule ^(0-9a-zA-Z\_)$ index.php?_page=$1 [Nc]
+RewriteRule ^print-([a-z0-9A-Z]+)-([a-z0-9A-Z]+)-([a-z0-9A-Z]+)$ invoice_print.php?_page=$1&mod=$2&aid=$3 [L]
+
+RewriteRule ^sidebar-([a-z]+)$  includes/full_length.php?set=$1 [L]
+
+#execptions_having_pid
+RewriteRule ^form-album-([0-9a-zA-Z]+)$  index.php?_page=form&mod=album&pid=$1 [NC]
+RewriteRule ^form-album-([0-9a-zA-Z]+)-([0-9a-zA-Z]+)$  index.php?_page=form&mod=album&pid=$1&aid=$2 [NC]
+
+RewriteRule ^form-gallery-([0-9a-zA-Z]+)$  index.php?_page=form&mod=gallery&pid=$1 [NC]
+RewriteRule ^form-gallery-([0-9a-zA-Z]+)-([0-9a-zA-Z]+)$  index.php?_page=form&mod=gallery&pid=$1&aid=$2 [NC]
+
+RewriteRule ^form-photo-([0-9a-zA-Z]+)$  index.php?_page=form&mod=photo&pid=$1 [NC]
+RewriteRule ^form-photo-([0-9a-zA-Z]+)-([0-9a-zA-Z]+)$  index.php?_page=form&mod=photo&pid=$1&aid=$2 [NC]
+
+RewriteRule ^form-svl-([0-9a-zA-Z]+)$  index.php?_page=form&mod=svl&pid=$1 [NC]
+RewriteRule ^form-svl-([0-9a-zA-Z]+)-([0-9a-zA-Z]+)$  index.php?_page=form&mod=svl&pid=$1&aid=$2 [NC]
+
+
+RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z_]+)$  index.php?_page=$1&mod=$2 [L]
+RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z]+)-([a-z]+)$  index.php?_page=$1&mod=$2&lactl=$3 [L]
+RewriteRule ^([a-zA-Z0-9_]+)-([a-zA-Z]+)-([0-9a-zA-Z]+)$  index.php?_page=$1&mod=$2&aid=$3 [NC]
+
+DirectoryIndex index.php
+
+<IfModule mod_php5.c>
+php_value post_max_size 5M
+php_value upload_max_filesize 5M
+php_value memory_limit 300M
+php_value max_execution_time 259200
+php_value max_input_time 259200
+php_value session.gc_maxlifetime 100
+</IfModule>
+RewriteCond %{QUERY_STRING} ^.*=(ht|f)tp\://.*$ [NC]
+

@@ -1,0 +1,19 @@
+img.cp, span.cp, .cp {
+	cursor:pointer;
+}
+.hides,.hide {
+	display:none;
+}
+
+#top-link {
+	background:none repeat scroll 0 0 #06F;
+	bottom:5px;
+	display:block;
+	padding:3px;
+	position:fixed;
+	right:20px;
+	text-transform:uppercase;
+}
+#top-link a {
+	color:#FFF;
+}
