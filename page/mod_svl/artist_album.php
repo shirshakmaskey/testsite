@@ -22,7 +22,8 @@ else if($pagename=='album.php'){
     $result_album_hit        =  $funSVLObj->hitRelatedSVLAlbum($artist_id);
 }
 else if($pagename=='lyrics.php'){
-    $svl_row  =  $funSVLObj->find_by_slug($gslug);  
+    $svl_row  =  $funSVLObj->find_by_slug($gslug);
+    $funSVLObj->count_views($gslug,$svl_row->views);  
     $artist_id   =  $svl_row->artist_id;
     $album_id    =  $svl_row->album_id;
     $row_artist  =  $funSVLObj->artist_by_id($artist_id);   
@@ -63,12 +64,12 @@ if($result['num_rows']>0){
                      <label>Qty</label>
                      <select name="ticket_qty" id="ticket_qty" class="form-control">
                             <?php foreach (range(1,10) as $key => $value) { ?>
-                  <option value="<?php echo $value;?>"><?php echo $value;?></option>  
+                  <option value="<?php echo $value;?>"><?php echo $value; ?></option>  
                   <?php } ?>  
                      </select>
                  </div>
  
-                 <div class="col-md-3">
+                 <div class="col-md-2">
                      <label>Name</label>
                     <input type="text" name="fullname" id="fullname" class="form-control">
                  </div>
@@ -95,7 +96,7 @@ $profile_image  =  $row_artist->profile_image;
  <h3 class="headline_title"><?php echo $row_artist->artist_name;?></h3>
 
 <?php if(file_exists(FCPATH.'uploads/images/artist/'.$profile_image) and !empty($profile_image)){?>
-<div class="feature_image"><img class="img-responsive" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>"></div><?php } ?>
+<div class="feature_image"><img class="img-responsive" width="100%" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>"></div><?php } ?>
 
     <div class="feature_thumb_images">
 <?php $num_gallery  =  $db->num_rows($result_gallery);
@@ -105,10 +106,11 @@ if($num_gallery>0){
  $cover_image  =  $row_gal->cover_image;   
  if(file_exists(FCPATH.'uploads/images/gallery/'.$cover_image) and !empty($cover_image)){
 ?>
-<div class="item_image"><a href="<?php echo base_url('uploads/images/gallery/'.$cover_image);?>" class="fancybox" rel="gallery" title="<?php echo $row_gal->gallery_name;?>"><img class="img-responsive" src="<?php echo base_url('uploads/images/gallery/'.$cover_image);?>"></a></div>
+<!--div class="item_image"><a href="<?php //echo base_url('uploads/images/gallery/'.$cover_image);?>" class="fancybox" rel="gallery" title="<?php //echo $row_gal->gallery_name;?>"><img class="img-responsive" width="100" src="<?php //echo base_url('uploads/images/gallery/'.$cover_image);?>"></a></div-->
 <?php }}
   $result_photo  =  $funSVLObj->photo_by_gallery_id($gallery_id); 
     $num_photo  =  $db->num_rows($result_photo);
+    ?><br><?php
     if($num_photo>0){
     while($row_photo =  $db->result($result_photo)){   
      $photo_image  =  $row_photo->image;   
@@ -121,11 +123,19 @@ if($num_gallery>0){
 <?php
 $cms['module:artist_images'] = ob_get_clean();
 ob_start();
+$profile_image  =  $row_artist->profile_image;
+?>
+ <h3 class="headline_title"><?php echo $row_artist->artist_name;?></h3>
+
+<?php if(file_exists(FCPATH.'uploads/images/artist/'.$profile_image) and !empty($profile_image)){?>
+<div class="feature_image"><img class="img-responsive" width="363" height="330p" style="margin-left: 2%;" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>"></div><?php }
+$cms['module:artist_images_profile'] = ob_get_clean();
+ob_start();
 $result_videos  =  $funSVLObj->featuredVideoSVL($artist_id);
 $num =  $db->num_rows($result_videos);
 if($num>0){
 ?>
-<h3 class="headline_title">Feature vidoes</h3>
+<h3 class="headline_title">Featured vidoes</h3>
 <?php
  $sn=1;
  while($row_videos  =  $db->result($result_videos)){ 
@@ -134,7 +144,7 @@ if($num>0){
             $video_code  =  get_youtube_code($video_url);
         ?>
  <div id="feature_video" class="videosize margin-bottom-10">                
- <iframe id="feature_video_iframe" type="text/html" width="100%" height="250" src="http://www.youtube.com/embed/<?php echo $video_code;?>" frameborder="0" allowFullScreen></iframe>               
+ <iframe id="feature_video_iframe" type="text/html" width="403" height="244" src="http://www.youtube.com/embed/<?php echo $video_code;?>" frameborder="0" allowFullScreen></iframe>               
  </div>
     <?php }//sn==1 
  $sn++; }//while?>
@@ -208,16 +218,16 @@ $result = $funSVLObj->latestSVLItem($artist_id,10);
 $cms['module:artist_lyrics'] = ob_get_clean();
 ob_start();?>
 <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
-       <div class=""><h3 class="headline_title pull-left">ALBUM</h3>            
+       <div class=""><h3 class="headline_title pull-left" style="<?php if($pagename=="album.php" || $pagename=="lyrics.php"){ echo "transform: rotate(-90deg);transform-origin: bottom right; margin-left: -2%;";} ?>"><b>ALBUM</b></h3>            
            <div class="owl-navigation">
             <div class="customNavigation">
-                <a class="owl-btn prev-v1"><i class="fa fa-angle-left"></i></a>
-                <a class="owl-btn next-v1"><i class="fa fa-angle-right"></i></a>
+                <a class="owl-btn prev-v1"><span>UP </span><i class="fa fa-angle-up"></i></a>
+                <a class="owl-btn next-v1"><span>DOWN </span><i class="fa fa-angle-down"></i></a>
             </div>
         </div><!--/navigation-->
     </div>
 
-    <div class="owl-recent-works-v1">
+    <div class="owl-recent-works-v1" style="margin-left: 5%;">
     <?php $num_album  =  $db->num_rows($result_album);
 if($num_album>0){
     while($row_album_item =  $db->result($result_album)){ 
@@ -232,8 +242,11 @@ if($num_album>0){
                 </em>
                 <span>
                     <strong><?php echo $row_album_item->album_name;?></strong>
-                    <i>Version : <?php echo $row_album_item->version;?></i>
-                    <p><?php echo substr($row_album_item->detail,0,50);?></p>
+                    <?php $rating = rand(1,5); for($i=1;$i<=$rating;$i++){
+                           echo "<i class='fa fa-star fa-2x' style=\"color: #eeca24\"></i>";
+                        } ?><br>
+                    <!--i>Version : <?php echo $row_album_item->version;?></i>
+                    <p><?php echo substr($row_album_item->detail,0,50);?></p-->
                 </span>
             </a>
         </div>
@@ -244,7 +257,7 @@ if($num_album>0){
 $cms['module:artist_album'] = ob_get_clean();
 ob_start();?>
 <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
-            <div class=""><h3 class="headline_title pull-left"><?php if($pagename!="welcome.php"){ echo "RELATED ALBUM"; }else{ echo "ALBUM";}?></h3>            
+            <div class=""><h3 class="headline_title pull-left" style="transform: rotate(-90deg);transform-origin: bottom right; margin-left: -10%; overflow: hidden;"><b><?php if($pagename!="welcome.php"){ echo "RELATED ALBUM"; }else{ echo " RECENT ALBUM";}?></b></h3>            
                 <div class="owl-navigation">
                     <div class="customNavigation">
                         <a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a>
@@ -253,7 +266,7 @@ ob_start();?>
                 </div><!--/navigation-->
             </div>
 
-    <div class="owl-recent-works-v2">
+    <div class="owl-recent-works-v2" style="margin-left: 5%;">
     <?php $num_album  =  $db->num_rows($result_album_related);
 if($num_album>0){
     while($row_album_item =  $db->result($result_album_related)){ 
@@ -269,8 +282,11 @@ if($num_album>0){
                 </em>
                 <span>
                     <strong><?php echo $row_album_item->album_name;?></strong>
-                    <i>Version : <?php echo $row_album_item->version;?></i>
-                    <p><?php echo substr($row_album_item->detail,0,50);?></p>
+                    <?php if($pagename=="artist.php"){$rating = rand(1,5); for($i=1;$i<=$rating;$i++){
+                           echo "<i class='fa fa-star fa-2x' style=\"color: #eeca24\"></i>";
+                        }} ?><br>
+                    <!--i>Version : <?php echo $row_album_item->version;?></i>
+                    <p><?php echo substr($row_album_item->detail,0,50);?></p-->
                 </span>
             </a>
         </div>
@@ -327,7 +343,7 @@ $result = $funSVLObj->relatedlatestSVL($artist_id,10);
 $cms['module:artist_other_lyrics'] = ob_get_clean();
 ob_start();?>
 <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
-            <div class=""><h3 class="headline_title pull-left">HIT ALBUM</h3>            
+            <div class=""><h3 class="headline_title pull-left" style="transform: rotate(-90deg);transform-origin: bottom right; margin-left: -5%;overflow: hidden;"><b>HIT ALBUM</b></h3>            
                 <div class="owl-navigation">
                     <div class="customNavigation">
                         <a class="owl-btn prev-v4"><i class="fa fa-angle-left"></i></a>
@@ -336,10 +352,10 @@ ob_start();?>
                 </div><!--/navigation-->
             </div>
 
-    <div class="owl-recent-works-v4">
+    <div class="owl-recent-works-v4" style="margin-left: 5%;">
     <?php $num_album  =  $db->num_rows($result_album_hit);
 if($num_album>0){
-    while($row_album_item =  $db->result($result_album_hit)){ 
+    while($row_album_item = $db->result($result_album_hit)){ 
         $slug  = $row_album_item->slug;
         ?>
         <div class="item">
@@ -347,13 +363,16 @@ if($num_album>0){
                 <em class="overflow-hidden">
                 <?php $cover_image  =  $row_album_item->cover_image;   
  if(file_exists(FCPATH.'uploads/images/album/'.$cover_image) and !empty($cover_image)){?>
-                    <img class="img-responsive" src="<?php echo base_url('uploads/images/album/'.$cover_image);?>" alt="<?php echo $row_album_item->album_name;?>">
+                    <img width="179" class="img-responsive" src="<?php echo base_url('uploads/images/album/'.$cover_image);?>" alt="<?php echo $row_album_item->album_name;?>">
       <?php } ?>              
                 </em>
                 <span>
                     <strong><?php echo $row_album_item->album_name;?></strong>
-                    <i>Version : <?php echo $row_album_item->version;?></i>
-                    <p><?php echo substr($row_album_item->detail,0,50);?></p>
+                    <?php if($pagename=="artist.php" || $pagename=="lyrics.php"){$rating = rand(1,5); for($i=1;$i<=$rating;$i++){
+                           echo "<i class='fa fa-star fa-2x' style=\"color: #eeca24\"></i>";
+                        }} ?><br>
+                    <!--i>Version : <?php //echo $row_album_item->version;?></i>
+                    <p><?php// echo substr($row_album_item->detail,0,50);?></p-->
                 </span>
             </a>
         </div>
@@ -418,6 +437,7 @@ $cms['module:album_info'] = ob_get_clean();
 ob_start();
 $artist_id   =  $svl_row->artist_id;
 $album_id    =  $svl_row->album_id;
+$views       =  $svl_row->views;
 $row_artist  =  $funSVLObj->artist_by_id($artist_id);   
 $row_album   =  $funSVLObj->album_by_id($album_id);
 $rating      =  $svl_row->rating;
@@ -425,7 +445,7 @@ $rating      =  $svl_row->rating;
 <div class="row">
                 
                  <div class="col-md-4">
-                    <table class="album_title_table" class="table">
+                    <table class="album_title_table" class="table" style="margin-top: 20px;font-size: 18px;">
                       <tr>
                       <td valign="top" class="album_title_table_title">Title :</td><td> 
                          <?php echo $svl_row->title;?>                         
@@ -444,6 +464,10 @@ $rating      =  $svl_row->rating;
                       <td valign="top" class="album_title_table_title">ARTIST :</td><td> 
                       <a href="<?php echo @base_url('artist/'.$row_artist->slug);?>"><?php echo @ucwords($row_artist->artist_name);?></a> </td>
                       </tr>
+                       <tr>
+                      <td valign="top" class="album_title_table_title">LYRICS :</td><td> 
+                      <a href="<?php echo @base_url('artist/'.$row_artist->slug);?>"><?php echo @ucwords($row_artist->artist_name);?></a> </td>
+                      </tr>
                     </table>
                      
                  </div>
@@ -455,10 +479,12 @@ $rating      =  $svl_row->rating;
                       <tr>
                       <td valign="top" class="album_title_table_title">RATING :</td><td> 
                       <?php for($i=1;$i<=$rating;$i++){
-                           echo "<i class='fa fa-star'></i>";
+                           echo "<i style=\"color: #eeca24;\" class='fa fa-star'></i>";
                         } ?>
                        </td>
                       </tr>
+                      <tr>
+                      <td valign="top" class="album_title_table_title">VIEWS :</td><td><?php echo $views; ?></td></tr>
                     </table>
                      
                  </div>

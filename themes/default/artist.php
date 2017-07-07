@@ -38,7 +38,8 @@
             <div class="container">
             <div class="row">
             <div class="col-md-12"> 
-              <cms:module:event_home/>
+            <cms:module:ticket_booking/>
+              <!--cms:module:event_home/-->
             </div>  
             </div>
             </div>
@@ -49,36 +50,41 @@
                 <div class="col-md-4 col_md_4">                            
                     <div class="leftsidesection margin-bottom-10">                   
                     <cms:module:artist_images/>    
-                    </div> 
-                    <div class="leftsidesection margin-bottom-10">
-                    <cms:module:artist_videos/>    
-                    </div>   
+                    </div>  
                 </div>
                 <!-- col-md-4 -->
                 <div class="col-md-8 col_md_8">
-                    <div class="rightsidesection margin-bottom-10"> 
+                    <div class="rightsidesection margin-bottom-10" style="height: 400px;"> 
                         <cms:module:artist_info/>        
                     </div>
                     <div class="rightsidesection margin-bottom-10">
                          <cms:module:artist_lyrics/>
-                     </div>
-
-                    <div class="rightsidesection margin-bottom-10"> 
-                        <!-- album Works -->
-                          <cms:module:artist_album/>   
-                        <!-- End album Works -->
-                   </div><!-- End rightsidesection -->
+                     </div><!-- End rightsidesection -->
                 </div>
                 <!-- col-md-8 -->
             </div>
             <!-- row -->
+            <div class="row">
+                <div class="col-md-4 col_md_4">
+                    <div class="leftsidesection margin-bottom-10">
+                        <cms:module:artist_videos/>    
+                    </div>  
+                </div>
+                <div class="col-md-8 col_md_8">
+                    <div class="rightsidesection margin-bottom-10"> 
+                        <!-- album Works -->
+                          <cms:module:artist_album/>   
+                        <!-- End album Works -->
+                   </div>  
+                </div>
+            </div>
         </div><!-- container -->
 
     
 
     <div class="container">
     <!-- Related Album -->
-       <cms:module:artist_related_album/> 
+       <!--cms:module:artist_related_album/--> 
     <!-- End Related Album -->
     </div>   
   
@@ -86,6 +92,7 @@
             <div class="row">
                 <div class="col-md-4 col_md_4">                            
                     <div class="leftsidesection margin-bottom-10">
+                    <cms:module:sponser_home/><br>
                     <cms:module:sponser_home/>
                     </div> <!-- leftsidesection -->
                        

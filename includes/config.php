@@ -8,7 +8,7 @@ define("PAGE","page");
 define("ENCR_KEY",$project_folder.'f_');
 /* --------------------------------------------------------------------------------*/
 /* foldernames  */
-define("PROJECT_FOLDER","/");
+define("PROJECT_FOLDER","/lyricsnepal/");
 //define("PROJECT_FOLDER","/");
 define("ADMINISTRATOR","myadmin/");
 $administrator       = "myadmin";

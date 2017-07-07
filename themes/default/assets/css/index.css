@@ -84,13 +84,13 @@
 	background: #fff;
 }
 .some_blue_body{
-	height: 250px;
+	height: 400px;
 	background: #0a82c6 url('../../images/mesh.png');
 	width: 100%;
 	top:0;
 }
 .now_content_start{
-	margin-top: -300px;
+	margin-top: -430px;
 }
 .videosize{
 	padding: 20px 0;
@@ -103,8 +103,8 @@
 
 
 .music1 {
-    background-color: #fff;
-    margin: 15px 0;
+    background-color: rgba(300,300,300,0.8);
+    margin: 5px 0;
 }
 .music2 {
     background-color: #fff;

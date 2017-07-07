@@ -205,7 +205,7 @@ h2.h2_plain
 .leftsidesection,.rightsidesection
 {
     background: #F6F6F6;
-    padding: 10px 30px;
+    padding: 10px 10px;
 }
 .feature_thumb_images .item_image{
     float: left;
@@ -236,7 +236,7 @@ h3.headline_title
 
 .music1 {
     background-color: #fff;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 .music2 {
     background-color: #fff;

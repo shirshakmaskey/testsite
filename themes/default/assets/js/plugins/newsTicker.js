@@ -14,7 +14,7 @@
         var pluginName = 'newsTicker',
                 defaults = {
                         row_height: 20,
-                        max_rows: 3,
+                        max_rows: 5,
                         speed: 400,
                         direction: 'up',
                         time: 2500,

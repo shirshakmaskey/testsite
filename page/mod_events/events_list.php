@@ -74,22 +74,58 @@ ob_start();
   $result = $funEventsObj->specialEvents(3);
   $num = $db->num_rows($result);
   if($num>0){?>
-<div class="row">
-    <?php
+<div id="myCarousel-event" class="carousel slide carousel-v1">
+    <div class="carousel-inner">
+  <!-- Indicators -->
+  <!--ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel"s data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol-->
+   <!-- Wrapper for slides -->
+  <!--div class="carousel-inner">
+    <div class="item active">
+      <img style="border: solid;border-width: 1px;border-color: black; width: auto;" src="<?php //echo base_url('uploads/images/events/eventbanner.png');?>" alt="eventbanner">
+      </div>
+    </div-->
+    <?php $sn=1;
     while($row = $db->result($result)){  //pr($row);
       $item_id   =  $row->id;
       $row_item  = $funEventsObj->file_items($item_id,'image','asc',1);
       $image     = @$row_item->item_name;
       $image_title     = @$row_item->item_title;    
 ?>
-<div class="col-md-4">
-<?php if(file_exists(FCPATH."uploads/images/events/".$image) and !empty($image)){ ?><div class="eventbanner"><a href="<?php echo base_url('events/'.$row->slug); ?>"> <img src="<?=base_url("uploads/images/events/".$image)?>" class="img-responsive" title="<?=$row->title;?>" alt="<?=$row->title;?>"></a>
-  <p><?=$row->title;?></p>
-</div>
-</div>
-<?php 
-    }
+<?php if(file_exists(FCPATH."uploads/images/events/".$image) and !empty($image)){ ?>
+
+<div class="item <?php echo $sn==1?'active':'';?>">
+      <a><img src="<?=base_url("uploads/images/events/".$image)?>" title="<?=$row->title;?>" alt="<?=$row->title;?>" style="width: 750px;"></a>
+      <!--div class="carousel-caption"-->
+      <div class="carousel-caption">
+        <p><?=$row->title;?></p>
+        </div>
+      <!--/div-->
+    </div>
+<?php $sn++; }
   }?>
+  <!--a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a-->
 </div>
-<?php } 
+</div>
+<div class="carousel-arrow">
+    <a class="left carousel-control" href="#myCarousel-event" data-slide="prev">
+      <i class="fa fa-angle-left"></i>
+    </a>
+    <a class="right carousel-control" href="#myCarousel-event" data-slide="next">
+      <i class="fa fa-angle-right"></i>
+    </a>
+  </div>
+</div>
+<?php }
 $cms['module:event_home'] = ob_get_clean();

@@ -737,7 +737,7 @@
 }
 
 .owl-work-v1 .item em.overflow-hidden {
-  display: block;
+  display: inline-block;
 }
 
 .owl-work-v1 .item a span {

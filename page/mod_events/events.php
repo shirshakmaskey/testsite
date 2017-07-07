@@ -218,24 +218,24 @@ $data['metadescription']     =  $row->meta_desc;
                   <div class="col-lg-6">
         <div class="form-group">
              <label>Fullname</label>
-              <input type="text" name="fullname" id="fullname" class="form-control required" value="<?php echo @isset($_POST['fullname'])?$_POST['fullname']:""; ?>" >
+              <input type="text" name="fullname" id="fullname" class="form-control required" value="<?php if(isset($_POST['fullname'])){echo $_POST['fullname'];}?>" >
          </div> 
 
                     <div class="form-group">
              <label>Email Address</label>
-              <input type="text" name="email" id="email" class="form-control required" value="<?php echo @isset($_POST['email'])?$_POST['email']:""; ?>">
+              <input type="text" name="email" id="email" class="form-control required" value="<?php if(isset($_POST['email'])){echo $_POST['email'];}?>">
          </div> 
                     
                   </div>
           <div class="col-lg-6">
           <div class="form-group">
              <label>Contact No.</label>
-              <input type="text" name="contact_no" id="contact_no" class="form-control required" value="<?php echo @isset($_POST['contact_no'])?$_POST['contact_no']:""; ?>">
+              <input type="text" name="contact_no" id="contact_no" class="form-control required" value="<?php if(isset($_POST['contact_no'])){echo $_POST['contact_no'];}?>">
          </div>
 
           <div class="form-group">
              <label>Address</label>
-              <input type="text" name="address" id="address" class="form-control required" value="<?php echo @isset($_POST['address'])?$_POST['address']:""; ?>">
+              <input type="text" name="address" id="address" class="form-control required" value="<?php if(isset($_POST['address'])){echo $_POST['address'];}?>">
          </div> 
         </div>
 
@@ -248,12 +248,7 @@ $data['metadescription']     =  $row->meta_desc;
         <div class="col-lg-6">
             <div class="form-group">
              <label>Qty</label>
-             <select name="ticket_qty" id="ticket_qty" class="form-control required">
-                  <?php foreach (range(1,10) as $key => $value) { 
-                  $sel  =  @(isset($_POST['ticket_qty']) and ($_POST['ticket_qty']==$value)) ?"selected":"";?>
-                  <option value="<?php echo $value;?>" <?php echo $sel;?>  ><?php echo $value;?></option>  
-                  <?php } ?>                    
-             </select>
+             <input type="text" name="ticket_qty" id="ticket_qty" value="<?php if(isset($_POST['ticket_qty'])){echo $_POST['ticket_qty'];}?>" class="form-control" required >
          </div>
         </div>
 

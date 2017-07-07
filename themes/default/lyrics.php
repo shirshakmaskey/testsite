@@ -49,20 +49,14 @@
                 <div class="col-md-4 col_md_4">                            
 
                     <div class="leftsidesection margin-bottom-10">
-                    <h3 class="headline_title">Feature vidoes</h3>
+                    <!--h3 class="headline_title">Feature vidoes</h3-->
                          <div id="feature_video" class="videosize margin-bottom-10">   
                          <cms:module:video_featured_songs/>             
                          </div>
                     </div>
-                    <div class="leftsidesection margin-bottom-10">
-                     <h3 class="headline_title">LATEST</h3>
-                          <div class="items_list">
-                              <cms:module:svl_home/>
-                          </div>        
-                    </div>
 
                 <div class="leftsidesection margin-bottom-10">
-                    <cms:module:custom_left/>
+                    <cms:module:artist_images_profile/>
                 </div> <!-- leftsidesection -->                    
 
 
@@ -76,13 +70,26 @@
 
                    </div><!-- End rightsidesection -->
 
-
-                    <div class="rightsidesection margin-bottom-10">
-                       <cms:module:lyrice_album_lyrics/>                       
-                    </div>
-
                 </div>
                 <!-- col-md-8 -->
+            </div>
+            <div class="row">
+                <div class="col-md-4 col_md_4">
+                    <!--div class="leftsidesection margin-bottom-10">
+                     <h3 class="headline_title">LATEST</h3>
+                          <div class="items_list">
+                              <cms:module:svl_home/>
+                          </div>        
+                    </div-->
+                    <cms:module:custom_left/>
+                    <br>
+                    <cms:module:custom_left/>
+                </div>
+                <div class="col-md-8 col_md_8">
+                     <div class="rightsidesection margin-bottom-10">
+                       <cms:module:lyrice_album_lyrics/>                       
+                    </div>
+                </div>
             </div>
             <!-- row -->
         </div><!-- container -->
@@ -96,7 +103,7 @@
 
     <div class="container">
     <!-- Related Album -->
-       <cms:module:artist_related_album/> 
+       <!--cms:module:artist_related_album/--> 
     <!-- End Related Album -->
     </div>   
   

@@ -33,6 +33,13 @@
 		 return $this->result($result);
 	}
 
+	function count_views($slug,$view)
+	{
+		 $view = $view+1;
+		 $query  =  "UPDATE `tbl_songs_videos` SET views=$view WHERE token_keys='$slug' and status='1'";
+		 $this->execute($query);
+	}
+
 	function find_by_id_songs($id)
 	{
 		 $query  =  "SELECT * from `tbl_songs_videos` WHERE id='$id'";

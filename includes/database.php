@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER['HTTP_HOST'] == "localhost:8080" || $_SERVER['HTTP_HOST'] == "localhost" ||  $_SERVER['HTTP_HOST']=="127.0.0.1")
 {
-	define("HOST","127.0.0.1");
+	define("HOST","localhost");
 	define("USER","root");
-	define("PASS","");
+	define("PASS","shirshak17");
 	define("DBNAME","db_lyrics");
 }
 else

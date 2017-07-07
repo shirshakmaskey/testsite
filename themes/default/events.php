@@ -48,6 +48,8 @@
                     <cms:module:events_category/>
 
                     <cms:module:search_block/>
+                    <br><br><br><br><br><br><br><br><br><br><br> 
+                    <cms:module:custom_left/>
 
 
                 </div>

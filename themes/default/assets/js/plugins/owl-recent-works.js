@@ -23,6 +23,28 @@ var OwlRecentWorks = function () {
                     owl.trigger('owl.prev');
                 })
             });            
+        },
+
+        initOwlRecentWorksV11: function () {
+            jQuery(document).ready(function() {
+            var owl = jQuery(".owl-recent-works-v11");
+                owl.owlCarousel({
+                    items: [3],
+                    itemsDesktop : [1000,3],
+                    itemsDesktopSmall : [900,3],
+                    itemsTablet: [600,2],
+                    itemsMobile : [479,1],
+                    slideSpeed: 1000
+                });
+
+                // Custom Navigation Events
+                jQuery(".next-v1").click(function(){
+                    owl.trigger('owl.next');
+                })
+                jQuery(".prev-v1").click(function(){
+                    owl.trigger('owl.prev');
+                })
+            });            
         },  
 
         ////Owl Recent Works v2
@@ -30,8 +52,8 @@ var OwlRecentWorks = function () {
             jQuery(document).ready(function() {
             var owl = jQuery(".owl-recent-works-v2");
                 owl.owlCarousel({
-                    items: [5],
-                    itemsDesktop : [1000,5],
+                    items: [6],
+                    itemsDesktop : [1000,6],
                     itemsDesktopSmall : [900,4],
                     itemsTablet: [600,3],
                     itemsMobile : [479,2],
@@ -74,8 +96,8 @@ var OwlRecentWorks = function () {
             jQuery(document).ready(function() {
             var owl = jQuery(".owl-recent-works-v4");
                 owl.owlCarousel({
-                    items: [7],
-                    itemsDesktop : [1000,7],
+                    items: [6],
+                    itemsDesktop : [1000,6],
                     itemsDesktopSmall : [900,5],
                     itemsTablet: [600,4],
                     itemsMobile : [479,3],

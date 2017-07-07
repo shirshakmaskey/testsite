@@ -102,7 +102,7 @@ img.profile-image {
 }
 
 .navbar{
-	background: #0a82c6 !important;
+	background: #0a82c6 url('../../images/mesh.png') !important;
     margin-top: 1px !important;
     border-radius: 0;
     border: none;
@@ -217,7 +217,7 @@ h3.headline_title
 
 .music1 {
     background-color: #fff;
-    margin: 15px 0;
+    margin: 5px 0;
 }
 .music2 {
     background-color: #fff;

@@ -1,5 +1,5 @@
 <?php ob_start();?>
-<div class="navbar navbar-default mega-menu" role="navigation">
+<div class="navbar navbar-default mega-menu" role="navigation" style="border: none;">
         <?php if(is_home()){ ?>
             <div class="container">
                 <div class="navbar-header">

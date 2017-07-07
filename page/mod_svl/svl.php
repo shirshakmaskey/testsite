@@ -1,4 +1,4 @@
-<?php 
+<?php
 ob_start();
 	$result = $funSVLObj->showInHome(5);
 	$num = $db->num_rows($result);
@@ -167,7 +167,7 @@ $result_videos  =  $funSVLObj->featuredVideoSVL();
 $num =  $db->num_rows($result_videos);
 if($num>0){
 ?>
-<h3 class="headline_title">Feature vidoes</h3>
+<!--h3 class="headline_title">Featured Videos</h3-->
 <?php
  $sn=1;
  while($row_videos  =  $db->result($result_videos)){ 
@@ -190,7 +190,7 @@ if($num>0){
             $video_code  =  get_youtube_code($video_url);
             $video_image =  get_youtube_thumbnail($video_url); 
         ?>
-   <div class="item"><a href="javascript:void(0);" onclick="document.getElementById('feature_video_iframe').src='http://www.youtube.com/embed/<?php echo $video_code;?>';" data-code="<?php echo $video_code;?>"><img class="img-responsive" src="<?php echo $video_image;?>"></a></div>
+   <!--div class="item"><a href="javascript:void(0);" onclick="document.getElementById('feature_video_iframe').src='http://www.youtube.com/embed/<?php echo $video_code;?>';" data-code="<?php echo $video_code;?>"><img class="img-responsive" src="<?php echo $video_image;?>"></a></div-->
    <?php
  $sn++; }//while?>
 </div>
@@ -202,67 +202,70 @@ ob_start();?>
      <div class="feature_thumb_images">
     <?php
      $sn=1;
- $result_artist  =  $funSVLObj->top_artist();
+ $result_artist  =  $funSVLObj->top_artist();?>
+    <table class="table-condensed table-responsive">
+ <?php
  while($row_artist  =  $db->result($result_artist)){ 
        $artist_name =  $row_artist->artist_name;
        $profile_image  =  $row_artist->profile_image;
     ?>
-    <?php if(file_exists(FCPATH.'uploads/images/artist/'.$profile_image) and !empty($profile_image)){?>
-       <div class="item_image"><a href="<?php echo base_url('artist/'.$row_artist->slug);?>" title="<?php echo $artist_name;?>"><img class="img-responsive" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>"></a></div>
-    <?php } ?>   
+    <?php if(file_exists(FCPATH.'uploads/images/artist/'.$profile_image) and !empty($profile_image)){
+        if($sn%3==1){echo "<tr>";}
+        ?>
+       <td><a href="<?php echo base_url('artist/'.$row_artist->slug);?>" title="<?php echo $artist_name;?>"><img height="200" width="200" class="img-responsive" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>"></a></td>
+    <?php if($sn%3==0){echo "</tr>";} 
+         } ?>   
     <?php $sn++; } ?> 
-       <div class="clearfix"></div>
+    </table>
+       <!--div class="clearfix"></div-->
     </div> 
 </div> 
 <?php
 $cms['module:top_artist'] = ob_get_clean();
 ob_start();?>
-<div class="">
-           <h3 class="headline_title pull-left">EXPLORE</h3>            
-            <div class="owl-navigation">
-                    <div class="customNavigation">
-                        <a class="owl-btn prev-v2"><i class="fa fa-angle-left"></i></a>
-                        <a class="owl-btn next-v2"><i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div><!--/navigation-->
+<!--div class="col-md-2" style="transform: rotate(-90deg);transform-origin: bottom right; background-color: skyblue; ">
+           <p class=" pull-left" style="font-size: 32px;">EXPLORE</p> 
+            </div-->
+            <div class="col-md-1">
+                <img src="<?php echo 'http://localhost/lyricsnepal/uploads/images/explore.png';?>">
             </div>
 
-<div class="owl-recent-works-v2">
+<div style="padding-top: 4%;">
 <?php
      $i=1;
-  $result  =  $funSVLObj->exploreSongs();
+     $j=1;
+  $result  =  $funSVLObj->exploreSongs();?>
+   <table class="table-responsive table-striped cellpadding="5" cellspacing="5" border="0">
+<?php
   while($row  =  $db->result($result)):
         $title          = $row->title;
         $slug           = $row->token_keys;
         $artist_name    =  $row->artist_name;
         $profile_image  =  $row->profile_image;
 ?>      
-<?php if(file_exists(FCPATH.'uploads/images/artist/'.$profile_image) and !empty($profile_image)){?>
+<?php if(file_exists(FCPATH.'uploads/images/artist/'.$profile_image) and !empty($profile_image) and $j<5){?>
 
                 <?php if($i==1){?>
-                    <div class="item">
-                <?php } ?>
-                    <table cellpadding="5" cellspacing="5" border="0" width="100%">
                     <tr>
-                    <td><a href="<?php echo base_url('lyrics/'.$row->token_keys);?>"><img width="60" class="img-responsive" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>" alt=""></a></td>
-                    <td><a href="<?php echo base_url('lyrics/'.$row->token_keys);?>"><strong><?php echo ucfirst($title);?></strong></a>
-                        <a href="<?php echo base_url('artist/'.$row->artist_slug);?>"><strong><?php echo ucwords($artist_name);?></strong></a></td>
-                    </tr>
-                    </table><br>
+                <?php } ?>
+                    <td><a href="<?php echo base_url('lyrics/'.$row->token_keys);?>"><img width="50" class="img-responsive" src="<?php echo base_url('uploads/images/artist/'.$profile_image);?>" alt=""></a></td>
+                    <td class="pull-left" width="300" style="padding-left: 20px;"><a style="color: black;" href="<?php echo base_url('lyrics/'.$row->token_keys);?>"><i><?php echo ucfirst($title);?></i></a><br>
+                        <a style="color: black;" href="<?php echo base_url('artist/'.$row->artist_slug);?>"><strong><?php echo ucwords($artist_name);?></strong></a></td>
                     <?php
-                  if($i%4==0){
-                     echo '</div>';
+                  if($i%3==0){
+                     echo "</tr>";
                      $i=1;
+                     $j++;
                   } else{$i++;}
         }//check image exist          
 
                   endwhile;
-                  if($i<4){
-                     echo '</ul>';
-                     echo '</div>';
+                  echo "</table>";
+                  if($i<3){
+                    //echo '</ul>';
+                     echo '</tr>';
                   } 
                   ?>  
-</div>
 </div>
 <?php
 $cms['module:explore_songs'] = ob_get_clean();

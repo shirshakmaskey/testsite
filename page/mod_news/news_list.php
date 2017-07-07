@@ -77,20 +77,21 @@ ob_start();
 ?>
 <div class="rightsidesection margin-bottom-10"> 
   <!-- album Works -->
-  <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
+  <div class="margin-bottom-40">
       <div class=""><h3 class="headline_title pull-left">NEWS AND EVENTS</h3>            
-          <div class="owl-navigation">
+          <!--div class="">
               <div class="customNavigation">
                   <a class="owl-btn prev-v1"><i class="fa fa-angle-left"></i></a>
                   <a class="owl-btn next-v1"><i class="fa fa-angle-right"></i></a>
-              </div>
+              </div-->
           </div><!--/navigation-->
       </div>
 
-      <div class="owl-recent-works-v1">
+      <div class="">
 <?php
 $result  =  $funNewsObj->latestNewsList(10);
 if($result['num_rows']>0){ ?>
+<table class="table-responsive table-hover pull-left">
   <?php
    while($row =  $funObj->result($result['result'])){
         $item_id   =  $row->id;
@@ -99,20 +100,18 @@ if($result['num_rows']>0){ ?>
       $image_title     = @$row_item->item_title;
   ?>
   <?php if(file_exists(FCPATH."uploads/images/news/".$image) and !empty($image)){ ?>    
-          <div class="item">
-              <a href="<?php echo base_url('news/'.$row->slug); ?>"> 
-                  <em class="overflow-hidden">
-                      <img src="<?=base_url("uploads/images/news/".$image)?>" class="img-responsive" title="<?=$image_title?>" alt="<?=$image_title?>">
-                  </em>
-                  <span>
-                      <strong><a href="<?php echo base_url('news/'.$row->slug); ?>"><?php echo $row->title;?></a></strong>
-                  </span>
-              </a>
-          </div>
+          <tr>
+              <td width="30%" style="padding: 15px 15px 15px 15px;"><a href="<?php echo base_url('news/'.$row->slug); ?>"> 
+                      <img src="<?=base_url("uploads/images/news/".$image)?>" class="img-responsive" title="<?=$image_title?>" alt="<?=$image_title?>"></a></td>
+                  <td style="vertical-align: middle;padding-left: 20px;">
+                      <strong><a style="color: black;"   href="<?php echo base_url('news/'.$row->slug); ?>"><?php echo $row->title;?></a></strong>
+              </td>
+          </tr>
     <?php }?>
 <?php   
-   }
-}
+   }?>
+   </table>
+<?php }
 ?>     
       </div>
       <!-- End owl Works -->

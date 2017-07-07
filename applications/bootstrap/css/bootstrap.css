@@ -1119,12 +1119,6 @@ img {
 .img-responsive,
 .thumbnail > img,
 .thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 .img-rounded {
   border-radius: 6px;
 }
@@ -3577,7 +3571,7 @@ tbody.collapse.in {
   z-index: 1000;
   display: none;
   float: left;
-  min-width: 160px;
+  min-width: 50px;
   padding: 5px 0;
   margin: 2px 0 0;
   font-size: 14px;

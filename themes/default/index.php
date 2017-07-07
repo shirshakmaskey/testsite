@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="assets/plugins/fancybox/source/jquery.fancybox.css">
     <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <cms:analyticstracking/>
 </head>
   
@@ -39,22 +40,26 @@
         <div class="row">
             <div class="col-md-4">                            
                 <div class="videosize margin-bottom-10">                
-                  <cms:module:video_home_five/>              
-                </div>                
-                <!-- <div class="cmslogo margin-bottom-30"><img class="img-responsive" src="images/cmslogo.png"></div> -->
-                <cms:module:sponser_home/> 
-                
-                            </div>
+                  <cms:module:video_home_five_a/>
+                </div>              
+            </div>                
+                <!-- <div class="cmslogo margin-bottom-30"><img class="img-responsive" src="images/cmslogo.png"></div> --> 
             <div class="col-md-8">
-                <div class="margin-bottom-100"></div>
-                <div class="musicscroll">
-                      <cms:module:svl_home/>  
-                </div>
-
-                
-              <cms:module:event_home/>  
-                
-
+                <!--div class="margin-bottom-100"></div-->
+                <div class="musicscroll" style="margin-top: 5.5%">
+                      <cms:module:svl_home/>
+                      <!--p align="center">ADvertisement Banner will be here</p-->  
+                </div>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <cms:module:sponser_home/>
+                <br>
+                <cms:module:sponser_home/>
+            </div>
+            <div class="col-md-8">
+                <cms:module:event_home/>
             </div>
         </div>
         </div>
@@ -68,7 +73,8 @@
     </div>
     <!--=== End Footer ===-->
 </div><!--/wrapper-->
-
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 <cms:defaultSourcesJS/>
 <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
 <script type="text/javascript" src="assets/plugins/smoothScroll.js"></script>

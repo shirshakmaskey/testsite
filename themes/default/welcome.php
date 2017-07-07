@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
@@ -49,13 +49,9 @@
 
     <!--=== Content ===-->
     <div class="artist_body_start">
-
-        
-
-
         <div class="container">
     <!-- Recent Works -->
-        <div class="owl-carousel-v1 owl-work-v1 margin-bottom-40">
+        <div class="row">
             <cms:module:explore_songs/>
         </div>
         <!-- End Recent Works -->
@@ -85,6 +81,7 @@
             <div class="row">
                 <div class="col-md-4 col_md_4">                            
                     <div class="leftsidesection margin-bottom-10">
+                    <cms:module:custom_left/><br>
                     <cms:module:custom_left/>
                     </div> <!-- leftsidesection -->
                        
