@@ -1,4 +1,4 @@
-owl/*
+/*
  *	jQuery OwlCarousel v1.31
  *
  *	Copyright (c) 2013 Bartosz Wojciechowski
